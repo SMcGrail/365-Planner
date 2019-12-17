@@ -1,45 +1,60 @@
-*{
-    box-sizing: border-box;
+body {
+    background-image: url(/assets/images/prism.png);
 }
 
+.input-text-style {
+    background-color: #333;
+    color: white;
+    width: 70px;
+  
+}
+
+.inputDiv-style {
+    margin: 0;
+    border: 1px solid white;
+}
 
 #currentDay {
     font-weight: bold;
+    color: #333;
 }
 
-.timeSlotText {
-    width: 70px;
-    height: 70px;
-    background-color: #333;
-    color: white;
-    border-radius: 5px;
-    text-align: center;
-    margin: 0;
-    padding-top: 5px;
-    
+.btn-style {
+    background-color: pink;
 }
 
-.typeHere {
-    position: relative;
-    z-index: 50;
-    bottom: 73px;
-    left: 120px;
-    width: 700px;
-    height: 70px;
-    margin: -55px; 
-    padding: 5px;
-    border-radius: 0 5px 5px 0;
-    border: 1px solid #333;
-    resize: none;
-    background-image: -webkit-linear-gradient(white, #330b3570);
-     
+.jumbotron-style {
+    background-image: -webkit-linear-gradient(#f06493, pink)
 }
 
-.clickToSave {
-    position: relative;
-    left: 400px;
-    bottom: 18px;
-    width: 50px;
-    height: 70px;  
+.change-blue {
+    background-image: -webkit-linear-gradient(#5555ce, skyblue);
+    float: right;
 }
 
+.change-purple {
+    background-image: -webkit-linear-gradient(#983fb1, #cda8db);
+    float: right;
+}
+.change-green {
+    background-image: -webkit-linear-gradient(#3fb158, #9ddb9b);
+    float: right;
+}
+.change-orange {
+    background-image: -webkit-linear-gradient(#ffa723, #ffdc91);
+    float: right;
+}
+.change-pink {
+    background-image: -webkit-linear-gradient(#f06493, pink);
+    float: right;
+}
+.change-clear {
+    background-image: -webkit-linear-gradient(#ffffff, #b6b6b6);
+    float: right;
+    border: .5px solid #333;
+}
+
+.color-change {
+    align: right;
+    color: #333;
+}

@@ -1,44 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Work Day Scheduler</title>
-  </head>
+</head>
 
-  <body>
-    <header class="jumbotron">
-      <h1 class="display-3">9 to 5 Planner</h1>
-      <p class="lead">Just a little reminder to do stuff and things.</p>
-      <p id="currentDay" class="lead">No day like today</p>
+<body>
+    <header class="jumbotron jumbotron-style">
+        <button class="btn color-btn change-pink" type="button" id="button-addon2"></button>
+        <button class="btn color-btn change-blue" type="button" id="button-addon2"></button>
+        <button class="btn color-btn change-purple" type="button" id="button-addon2"></button>
+        <button class="btn color-btn change-green" type="button" id="button-addon2"></button>
+        <button class="btn color-btn change-orange" type="button" id="button-addon2"></button>
+        <button class="btn color-btn change-clear" type="button" id="button-addon2"></button>
+
+        <h1 class="display-3">9 to 5 Planner</h1>
+        <p class="lead">Just a little reminder to do stuff and things.</p>
+        <p id="currentDay" class="lead">No day like today</p>
     </header>
     <div class="container">
-        <div id="timeSlotList">
-            
+        <div class="timeSlotList">
+            <div class="input-group mb-3">
+                <span class="input-group-text input-text-style" id="inputGroup-sizing-lg">9am</span>
+                <input type="text" class="form-control" placeholder="What's up now?"
+                    aria-label="What's up now?" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary btn-style" type="button" id="button-addon2">Save</button>
+                </div>
+            </div>
+            <div class="input-group mb-3 inputDiv-Style">
+                <span class="input-group-text input-text-style" id="inputGroup-sizing-lg">10am</span>
+                <input type="text" class="form-control" placeholder="What's up now?"
+                    aria-label="What's up now?" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary btn-style" type="button" id="button-addon2">Save</button>
+                </div>
+            </div>
+            <div class="input-group mb-3 inputDiv-Style">
+                <span class="input-group-text input-text-style" id="inputGroup-sizing-lg">11am</span>
+                <input type="text" class="form-control" placeholder="What's up now?"
+                    aria-label="What's up now?" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary btn-style" type="button" id="button-addon2">Save</button>
+                </div>
+            </div>
+            <div class="input-group mb-3 inputDiv-Style">
+                <span class="input-group-text input-text-style" id="inputGroup-sizing-lg">12pm</span>
+                <input type="text" class="form-control" placeholder="What's up now?"
+                    aria-label="What's up now?" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary btn-style" type="button" id="button-addon2">Save</button>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text input-text-style" id="inputGroup-sizing-lg">1pm</span>
+                <input type="text" class="form-control" placeholder="What's up now?"
+                    aria-label="What's up now?" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary btn-style" type="button" id="button-addon2">Save</button>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text input-text-style" id="inputGroup-sizing-lg">2pm</span>
+                <input type="text" class="form-control" placeholder="What's up now?"
+                    aria-label="What's up now?" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary btn-style" type="button" id="button-addon2">Save</button>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text input-text-style" id="inputGroup-sizing-lg">3pm</span>
+                <input type="text" class="form-control" placeholder="What's up now?"
+                    aria-label="What's up now?" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary btn-style" type="button" id="button-addon2">Save</button>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text input-text-style" id="inputGroup-sizing-lg">4pm</span>
+                <input type="text" class="form-control" placeholder="What's up now?"
+                    aria-label="What's up now?" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary btn-style" type="button" id="button-addon2">Save</button>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text input-text-style" id="inputGroup-sizing-lg">5pm</span>
+                <input type="text" class="form-control" placeholder="What's up now?"
+                    aria-label="What's up now?" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary btn-style" type="button" id="button-addon2">Save</button>
+                </div>
+            </div>
+
         </div>
-          
-      </ul>
+
     </div>
 
-    
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="assets/javascript/planner.js"></script>
-  </body>
+    <script src="assets/javascript/planner2.js"></script>
+    <script src="assets/javascript/colorChange.js"></script>
+</body>
+
 </html>
