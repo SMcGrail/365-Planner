@@ -9,100 +9,93 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style2.css" />
     <title>Work Day Scheduler</title>
 </head>
 
 <body>
     <header class="jumbotron jumbotron-style">
-        <button class="btn color-btn change-pink" type="button" id="button-addon2"></button>
-        <button class="btn color-btn change-blue" type="button" id="button-addon2"></button>
-        <button class="btn color-btn change-purple" type="button" id="button-addon2"></button>
-        <button class="btn color-btn change-green" type="button" id="button-addon2"></button>
-        <button class="btn color-btn change-orange" type="button" id="button-addon2"></button>
-        <button class="btn color-btn change-clear" type="button" id="button-addon2"></button>
-
         <h1 class="display-3">9 to 5 Planner</h1>
         <p class="lead">Just a little reminder to do stuff and things.</p>
         <p id="currentDay" class="lead">No day like today</p>
     </header>
     <div class="container">
         <div class="timeSlotList">
-            <div class="input-group mb-3">
+            <div class="input-group inputDiv-Style">
                 <span class="input-group-text input-text-style" id="inputGroup-sizing-lg">9am</span>
-                <input type="text" class="form-control" placeholder="What's up now?"
+                <input type="text" class="form-control inputStyle" id="nineA" placeholder="What's up now?"
                     aria-label="What's up now?" aria-describedby="button-addon2">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-secondary btn-style" type="button" id="button-addon2">Save</button>
+                    <button class="btn btn-outline-secondary btn-style btn9a" type="button" id="button-addon2">Save</button>
                 </div>
             </div>
-            <div class="input-group mb-3 inputDiv-Style">
+            <div class="input-group inputDiv-Style">
                 <span class="input-group-text input-text-style" id="inputGroup-sizing-lg">10am</span>
-                <input type="text" class="form-control" placeholder="What's up now?"
+                <input type="text" class="form-control inputStyle" id="tenA" placeholder="What's up now?"
                     aria-label="What's up now?" aria-describedby="button-addon2">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-secondary btn-style" type="button" id="button-addon2">Save</button>
+                    <button class="btn btn-outline-secondary btn-style btn10a" type="button" id="button-addon2">Save</button>
                 </div>
             </div>
-            <div class="input-group mb-3 inputDiv-Style">
+            <div class="input-group inputDiv-Style">
                 <span class="input-group-text input-text-style" id="inputGroup-sizing-lg">11am</span>
-                <input type="text" class="form-control" placeholder="What's up now?"
+                <input type="text" class="form-control inputStyle" id="elevenA" placeholder="What's up now?"
                     aria-label="What's up now?" aria-describedby="button-addon2">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-secondary btn-style" type="button" id="button-addon2">Save</button>
+                    <button class="btn btn-outline-secondary btn-style btn11a" type="button" id="button-addon2 btnDisable">Save</button>
                 </div>
             </div>
-            <div class="input-group mb-3 inputDiv-Style">
+            <div class="input-group inputDiv-Style">
                 <span class="input-group-text input-text-style" id="inputGroup-sizing-lg">12pm</span>
-                <input type="text" class="form-control" placeholder="What's up now?"
+                <input type="text" class="form-control inputStyle" id="twelveP" placeholder="What's up now?"
                     aria-label="What's up now?" aria-describedby="button-addon2">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-secondary btn-style" type="button" id="button-addon2">Save</button>
+                    <button class="btn btn-outline-secondary btn-style btn12p" type="button" id="button-addon2">Save</button>
                 </div>
             </div>
-            <div class="input-group mb-3">
+            <div class="input-group inputDiv-Style">
                 <span class="input-group-text input-text-style" id="inputGroup-sizing-lg">1pm</span>
-                <input type="text" class="form-control" placeholder="What's up now?"
+                <input type="text" class="form-control inputStyle" id="oneP" placeholder="What's up now?"
                     aria-label="What's up now?" aria-describedby="button-addon2">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-secondary btn-style" type="button" id="button-addon2">Save</button>
+                    <button class="btn btn-outline-secondary btn-style btn1p" type="button" id="button-addon2">Save</button>
                 </div>
             </div>
-            <div class="input-group mb-3">
+            <div class="input-group inputDiv-Style">
                 <span class="input-group-text input-text-style" id="inputGroup-sizing-lg">2pm</span>
-                <input type="text" class="form-control" placeholder="What's up now?"
-                    aria-label="What's up now?" aria-describedby="button-addon2">
+                <input type="text" class="form-control inputStyle" id="twoP" placeholder="What's up now?"
+                    aria-label="What's up now?" aria-describedby="button-addon2" rows="2">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-secondary btn-style" type="button" id="button-addon2">Save</button>
+                    <button class="btn btn-outline-secondary btn-style btn2p" type="button" id="button-addon2">Save</button>
                 </div>
             </div>
-            <div class="input-group mb-3">
+            <div class="input-group inputDiv-Style">
                 <span class="input-group-text input-text-style" id="inputGroup-sizing-lg">3pm</span>
-                <input type="text" class="form-control" placeholder="What's up now?"
+                <input type="text" class="form-control inputStyle" id="threeP" placeholder="What's up now?"
                     aria-label="What's up now?" aria-describedby="button-addon2">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-secondary btn-style" type="button" id="button-addon2">Save</button>
+                    <button class="btn btn-outline-secondary btn-style btn3p" type="button" id="button-addon2">Save</button>
                 </div>
             </div>
-            <div class="input-group mb-3">
+            <div class="input-group inputDiv-Style">
                 <span class="input-group-text input-text-style" id="inputGroup-sizing-lg">4pm</span>
-                <input type="text" class="form-control" placeholder="What's up now?"
+                <input type="text" class="form-control inputStyle" id="fourP" placeholder="What's up now?"
                     aria-label="What's up now?" aria-describedby="button-addon2">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-secondary btn-style" type="button" id="button-addon2">Save</button>
+                    <button class="btn btn-outline-secondary btn-style btn4p" type="button" id="button-addon2">Save</button>
                 </div>
             </div>
-            <div class="input-group mb-3">
+            <div class="input-group inputDiv-Style input-bottom">
                 <span class="input-group-text input-text-style" id="inputGroup-sizing-lg">5pm</span>
-                <input type="text" class="form-control" placeholder="What's up now?"
+                <input type="text" class="form-control inputStyle" id="fiveP" placeholder="What's up now?"
                     aria-label="What's up now?" aria-describedby="button-addon2">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-secondary btn-style" type="button" id="button-addon2">Save</button>
+                    <button class="btn btn-outline-secondary btn-style btn5p" type="button" id="button-addon2">Save</button><br>
                 </div>
             </div>
 
         </div>
-
+<footer></footer>
     </div>
 
     </ul>
@@ -119,7 +112,13 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="assets/javascript/planner2.js"></script>
-    <script src="assets/javascript/colorChange.js"></script>
+    <!-- <script src="assets/javascript/colorChange.js"></script> -->
 </body>
 
 </html>
+<!-- <button class="btn color-btn change-pink" type="button" id="button-addon2"></button>
+<button class="btn color-btn change-blue" type="button" id="button-addon2"></button>
+<button class="btn color-btn change-purple" type="button" id="button-addon2"></button>
+<button class="btn color-btn change-green" type="button" id="button-addon2"></button>
+<button class="btn color-btn change-orange" type="button" id="button-addon2"></button>
+<button class="btn color-btn change-clear" type="button" id="button-addon2"></button> -->
