@@ -60,3 +60,7 @@ body {
 .rightNow {
     background-color: #b0d1c6;
 }
+
+.rightNow:focus {
+    background-color: #b0d1c6;
+}

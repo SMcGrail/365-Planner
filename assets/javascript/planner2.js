@@ -1,8 +1,9 @@
 $(document).ready(function () {
     let todayDateTime = $("#currentDay");
-    
+
     const timeOfDay = ["9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm"];
 
+    //set intervl so that time changes without reloading page
     setInterval(() => {
         const now = moment();
         const dateTime = now.format('dddd, MMMM Do, hh:mm a');
@@ -10,92 +11,57 @@ $(document).ready(function () {
 
         let currentTime = moment().format("H");
 
-        if (currentTime > 9) {
-            $("#nineA").addClass("afterHour");
-            $("#nineA").attr("disabled", true);
-            $("#nineA").removeClass("beforeHour");
-            $(".btn9a").attr("disabled", "disabled");
-        } else if (currentTime == 9) {
-            $("#nineA").addClass("rightNow")
+        function classUpdate(time, idClass) {
+            if (currentTime > time) {
+                $(idClass).addClass("afterHour");
+                $(idClass).removeClass("beforeHour");
+                // $(idClass).attr("disabled", "disabled");
+            } else if (currentTime == time) {
+                $(idClass).addClass("rightNow");
+            }
         }
 
-        if (currentTime > 10) {
-            $("#tenA").addClass("afterHour");
-            $("#tenA").attr("disabled", true);
-            $("#tenA").removeClass("beforeHour");
-            $(".btn10a").attr("disabled", "disabled");
-        } else if (currentTime == 10) {
-            $("#tenA").addClass("rightNow")
-        }
-
-        if (currentTime > 11) {
-            $("#elevenA").addClass("afterHour");
-            $("#elevenA").attr("disabled", true);
-            $("#elevenA").removeClass("beforeHour");
-            $(".btn11a").attr("disabled", "disabled");
-        } else if (currentTime == 11) {
-            $("#elevenA").addClass("rightNow")
-        }
-
-        if (currentTime > 12) {
-            $("#twelveP").addClass("afterHour");
-            $("#twelveP").attr("disabled", true);
-            $("#twelveP").removeClass("beforeHour");
-            $(".btn12p").attr("disabled", "disabled");
-        } else if (currentTime == 12) {
-            $("#twelveP").addClass("rightNow")
-        }
-
-        if (currentTime > 13) {
-            $("#oneP").addClass("afterHour");
-            $("#oneP").attr("disabled", true);
-            $("#oneP").removeClass("beforeHour");
-            $(".btn1p").attr("disabled", "disabled");
-        } else if (currentTime == 13) {
-            $("#oneP").addClass("rightNow")
-        }
-
-        if (currentTime > 14) {
-            $("#twoP").addClass("afterHour");
-            $("#twoP").attr("disabled", true);
-            $("#twoP").removeClass("beforeHour");
-            $(".btn2p").attr("disabled", "disabled");
-        } else if (currentTime == 14) {
-            $("#twoP").addClass("rightNow")
-        }
-
-        if (currentTime > 15) {
-            $("#threeP").addClass("afterHour");
-            $("#threeP").attr("disabled", true);
-            $("#threeP").removeClass("beforeHour");
-            $(".btn3p").attr("disabled", "disabled");
-        } else if (currentTime == 15) {
-            $("#threeP").addClass("rightNow")
-        }
-
-        if (currentTime > 16) {
-            $("#fourP").addClass("afterHour");
-            $("#fourP").attr("disabled", true);
-            $("#fourP").removeClass("beforeHour");
-            $(".btn4p").attr("disabled", "disabled");
-        } else if (currentTime == 16) {
-            $("#fourP").addClass("rightNow")
-        }
-
-        if (currentTime > 17) {
-            $("#fiveP").addClass("afterHour");
-            $("#fiveP").attr("disabled", true);
-            $("#fiveP").removeClass("beforeHour");
-            $(".btn5p").attr("disabled", "disabled");
-        } else if (currentTime == 17) {
-            $("#fiveP").addClass("rightNow")
-        }
-
+        //call the class updates from the above function
+        classUpdate(9, "#nineA");
+        classUpdate(9, ".btn9a");
+        classUpdate(10, "#tenA");
+        classUpdate(10, ".btn10a");
+        classUpdate(11, "#elevenA");
+        classUpdate(11, ".btn11a");
+        classUpdate(12, "#twelveP");
+        classUpdate(12, ".btn12p");
+        classUpdate(13, "#oneP");
+        classUpdate(13, ".btn1p");
+        classUpdate(14, "#twoP");
+        classUpdate(14, ".btn2p");
+        classUpdate(15, "#threeP");
+        classUpdate(15, ".btn3p");
+        classUpdate(16, "#fourP");
+        classUpdate(16, ".btn4p");
+        classUpdate(17, "#fiveP");
+        classUpdate(17, ".btn5p");
+ 
     }, 1000);
 
-    $(".btn").click(function() {
+    //function for save button
+    $(".btn").click(function () {
         console.log("you clicked the button!");
+        //save input to local storage
+        $('input[type="text"]').each(function(){    
+            var id = $(this).attr('id');
+            var value = $(this).val();
+           localStorage.setItem(id, value); 
+       
+           localStorage.getItem(id, value).innerHTML(this); 
+
+        });  
         
-    })
+       
+       
+
+    });
+
+
+
 
 });
