@@ -1,7 +1,7 @@
 $(document).ready(function () {
     let todayDateTime = $("#currentDay");
 
-    
+
 
     //set intervl so that time changes without reloading page
     setInterval(() => {
@@ -40,29 +40,24 @@ $(document).ready(function () {
         classUpdate(16, ".btn4p");
         classUpdate(17, "#fiveP");
         classUpdate(17, ".btn5p");
- 
-    }, 1000);
 
-    let inputArray = [{}];
+    }, 1000);
 
     //function for save button
     $(".btn").click(function () {
         console.log("you clicked the button!");
         //save input to local storage
-        $('input[type="text"]').each(function(){    
-            var id = $(this).attr('id');
-            var value = $(this).val();
-           inputArray.push(id, value); 
-            console.log(inputArray);
+        $('input[type="text"]').each(function () {
+            let id = $(this).attr('id');
+            let value = $(this).val();
             localStorage.setItem(id, value);
-        }); 
-        
-
-       
-
+        });
     });
-
-
-
+    //display input saved in local storage
+    $('input[type="text"]').each(function () {
+        let savedInput = $(this).attr('id');
+        let displayInput = localStorage.getItem(savedInput);
+        document.getElementById(savedInput).value = displayInput;
+    });
 
 });
