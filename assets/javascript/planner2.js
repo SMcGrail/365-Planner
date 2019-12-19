@@ -1,7 +1,7 @@
 $(document).ready(function () {
     let todayDateTime = $("#currentDay");
 
-    const timeOfDay = ["9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm"];
+    
 
     //set intervl so that time changes without reloading page
     setInterval(() => {
@@ -43,6 +43,8 @@ $(document).ready(function () {
  
     }, 1000);
 
+    let inputArray = [{}];
+
     //function for save button
     $(".btn").click(function () {
         console.log("you clicked the button!");
@@ -50,13 +52,12 @@ $(document).ready(function () {
         $('input[type="text"]').each(function(){    
             var id = $(this).attr('id');
             var value = $(this).val();
-           localStorage.setItem(id, value); 
-       
-           localStorage.getItem(id, value).innerHTML(this); 
-
-        });  
+           inputArray.push(id, value); 
+            console.log(inputArray);
+            localStorage.setItem(id, value);
+        }); 
         
-       
+
        
 
     });
